@@ -52,20 +52,20 @@ public:
         }
     }
 /*********************************************************
-        # nazwa funkcji: getMaxValue
+        # nazwa funkcji: sortBySelection()
         # parametry wejściowe: -
         # wartość zwracana: -
         # autor: xyz
  *********************************************************/
     void sortBySelection() {
+        int min;
         for (int i = 0; i < MAX_SIZE; i++) {
-            int min = numbers[i];
-            for (int j = i; j < MAX_SIZE; j++) {
-                if (min > numbers[j]) {
+            min = numbers[i];
+            for (int j = i + 1; j < MAX_SIZE; j++) {
+                if (numbers[j] > min) {
                     min = numbers[j];
-                    int temp = numbers[i];
-                    numbers[i] = numbers[j];
-                    numbers [j] = temp;
+                    numbers[j] = numbers[i];
+                    numbers[i] = min;
                 }
             }
         }
