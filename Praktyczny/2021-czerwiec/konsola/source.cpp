@@ -79,4 +79,6 @@ int main()
     s1.showArray();
     s1.sortBySelection();
     s1.showArray();
+
+return 0;
 }
